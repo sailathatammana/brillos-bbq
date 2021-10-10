@@ -1,0 +1,22 @@
+{
+  "inputName": {
+    "type": "text",
+    "placeholder": "John Doe",
+    "required": true
+  },
+  "inputEmail": {
+    "type": "email",
+    "placeholder": "john@email.com",
+    "required": true
+  },
+  "inputDate": {
+    "type": "date",
+    "placeholder": "DD.MM.YYYY",
+    "required": true
+  },
+  "inputTime": {
+    "type": "time",
+    "placeholder": "HH.MM",
+    "required": true
+  }
+}

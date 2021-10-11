@@ -3,7 +3,7 @@ export default function Product({ product }) {
     <div className="product-page">
       <h2> {product.title}</h2>
       <p>{product.description}</p>
-      <p>{product.price}</p>
+      <p>{product.price} kr</p>
       <img
         src={product.imageURL}
         alt={product.description}

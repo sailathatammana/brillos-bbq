@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="footer">
+    <div className="footer">
       <ul>
         <li>
-          <a href="https://www.facebook.com/">
+          <a href="https://www.facebook.com/" target="blank">
             <i class="fab fa-facebook-square"></i>
           </a>
         </li>
@@ -14,6 +14,6 @@ export default function Footer() {
         </li>
       </ul>
       <p>2021 . Brillo's</p>
-    </footer>
+    </div>
   );
 }

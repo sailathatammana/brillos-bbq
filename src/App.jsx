@@ -6,6 +6,7 @@ import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
 import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer";
+import "./styles/style.scss";
 
 export default function App() {
   return (

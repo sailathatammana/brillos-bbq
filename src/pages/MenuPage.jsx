@@ -1,38 +1,21 @@
-import { useState, useEffect, useCallback } from "react";
-import { getFirestore } from "firebase/firestore/lite";
-import firebaseInstance from "../scripts/firebase";
-import { getCollection } from "../scripts/fireStore";
+import useFetch from "../hooks/useFetch";
 
 import Category from "../components/Category";
 
 export default function MenuPage() {
-  const [categories, setCategories] = useState([]);
-  const [status, setStatus] = useState(0);
+  const categories = useFetch("categories");
 
-  //properties
-  const database = getFirestore(firebaseInstance);
-
-  //Methods
-  const getCategories = useCallback(async () => {
-    const collection = await getCollection(database, "categories");
-    setCategories(collection);
-    console.log(collection);
-    setStatus(1);
-  }, [database]);
-
-  useEffect(() => {
-    getCategories();
-  }, [getCategories]);
-
-  const category = categories.map((category) => (
+  const category = categories.data.map((category) => (
     <Category key={category.id} category={category} />
   ));
 
   return (
-    <div>
-      {status === 0 && <p>Loading...</p>}
-      {status === 1 && <ul>{category}</ul>}
-      {status === 2 && <p>Error</p>}
+    <div className="page-menu">
+      {categories.loading === true && <p>Loading...</p>}
+      {categories.error !== null && <p>Error 🚨</p>}
+      {!categories.loading && categories.error === null && (
+        <section className="section-menu ">{category}</section>
+      )}
     </div>
   );
 }

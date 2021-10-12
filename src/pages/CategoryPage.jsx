@@ -1,38 +1,35 @@
-import { useState, useEffect, useCallback } from "react";
-import { getFirestore } from "firebase/firestore/lite";
-import firebaseInstance from "../scripts/firebase";
-import { getCollection } from "../scripts/fireStore";
+import { useParams, NavLink } from "react-router-dom";
 
+import useFetch from "../hooks/useFetch";
 import Product from "../components/Product";
 
 export default function CategoryPage() {
-  const [products, setproducts] = useState([]);
-  const [status, setStatus] = useState(0);
+  // Hooks
+  const categories = useFetch("categories");
+  const { categoryID } = useParams();
 
-  //properties
-  const database = getFirestore(firebaseInstance);
+  function getCurrentCategory(array, id) {
+    return array.filter((item) => {
+      return item.id === id;
+    })[0];
+  }
 
-  //Methods
-  const getproducts = useCallback(async () => {
-    const collection = await getCollection(database, "products");
-    setproducts(collection);
-    console.log(collection);
-    setStatus(1);
-  }, [database]);
-
-  useEffect(() => {
-    getproducts();
-  }, [getproducts]);
-
-  const product = products.map((product) => (
-    <Product key={product.id} product={product} />
-  ));
+  const currentCategory = getCurrentCategory(categories.data, categoryID);
 
   return (
-    <div>
-      {status === 0 && <p>Loading...</p>}
-      {status === 1 && <ul>{product}</ul>}
-      {status === 2 && <p>Error</p>}
+    <div className="category">
+      {categories.loading === true && <p>Loading...</p>}
+      {categories.error !== null && <p>Error</p>}
+      {!categories.loading && categories.error === null && (
+        <div className="page-category">
+          <h1>{currentCategory.title}</h1>
+          <Product category={currentCategory} />
+
+          <NavLink to={`/menu`} className="btn btn-main btn-300">
+            <h3>Go back to Menu</h3>
+          </NavLink>
+        </div>
+      )}
     </div>
   );
 }

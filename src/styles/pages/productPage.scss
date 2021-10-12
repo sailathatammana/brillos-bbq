@@ -1,0 +1,18 @@
+.page-product {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+
+  display: grid;
+  gap: 0px;
+  grid-auto-flow: row;
+
+  justify-items: center;
+  align-items: center;
+
+  .btn-300 {
+    width: 300px;
+    margin: 18px;
+  }
+  //@media only screen and (min-width: $desktopBreakpoint)
+}

@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: $grayDark;
+  background: $gray9;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   .home {
@@ -12,7 +12,7 @@ header {
     height: 100%;
     width: $home-width;
     border: none;
-    /*     @include flex-full-centered; */
+    @include flex-full-centered;
     img {
       height: 80px;
     }

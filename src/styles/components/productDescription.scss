@@ -1,0 +1,30 @@
+.section-product_description {
+  width: 100%;
+  text-align: center;
+
+  h2,
+  p {
+    padding-left: 12px;
+    color: $black;
+    @media only screen and (min-width: $desktopBreakpoint) {
+      width: 800px;
+      margin: auto;
+      padding-left: 0px;
+    }
+  }
+  h2 {
+    margin: 8px 0;
+    text-transform: capitalize;
+  }
+  p {
+    padding-top: 12px;
+  }
+  img {
+    margin-top: 8px;
+    height: 250px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

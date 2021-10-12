@@ -1,3 +1,36 @@
+import { useParams, NavLink } from "react-router-dom";
+
+import useFetch from "../hooks/useFetch";
+import ProductDescription from "../components/ProductDescription";
+import Ingredients from "../components/Ingredients";
+
 export default function ProductPage() {
-  return <h1>Product Page</h1>;
+  // Hooks
+  const products = useFetch("products");
+  const { categoryID } = useParams();
+  const { productID } = useParams();
+
+  function getRelatedItem(array, id) {
+    return array.filter((item) => {
+      return item.id === id;
+    })[0];
+  }
+  // Const
+  const product = getRelatedItem(products.data, productID);
+
+  return (
+    <>
+      {products.loading === true && <p>Loading...</p>}
+      {products.error !== null && <p>Error 🚨</p>}
+      {!products.loading && products.error === null && (
+        <main className="page-product">
+          <ProductDescription product={product} />
+          <Ingredients product={product} />
+          <NavLink to={`/menu/${categoryID}`} className="btn btn-main btn-300">
+            <h3>Go back to category</h3>
+          </NavLink>
+        </main>
+      )}
+    </>
+  );
 }

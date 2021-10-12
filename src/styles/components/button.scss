@@ -1,0 +1,39 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  cursor: pointer;
+  height: $mob-button-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+.btn-main {
+  background: $red;
+  border: 1px solid $red;
+  border-radius: 8px;
+  filter: brightness(0.8);
+
+  h3,
+  h4 {
+    color: $white;
+    text-transform: capitalize;
+  }
+  .icon-btn {
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+    filter: invert(1);
+  }
+  &:hover {
+    transition: ease 0.3s;
+    filter: brightness(1);
+  }
+  &:disabled {
+    filter: saturate(0);
+    opacity: 0.05;
+  }
+}

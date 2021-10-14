@@ -13,16 +13,18 @@
       font-weight: bold;
     }
     &:hover {
+      background: $gray3;
       border: 1px solid $black;
       transition: 0.3s ease;
     }
   }
   .btn-active {
+    background: $gray3;
     border: 1px solid $black;
     margin: 0 6px;
     h4 {
-      color: $black;
-      font-weight: bold;
+      background: $gray3;
+      color: $white;
     }
   }
 }

@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: $gray9;
+  background: $red;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   .home {
@@ -44,7 +44,10 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     h4 {
-      color: $black;
+      margin-top: 10px;
+      color: $white;
+      font-weight: bold;
+      font-size: medium;
     }
     a {
       cursor: pointer;

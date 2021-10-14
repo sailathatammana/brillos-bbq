@@ -6,7 +6,7 @@
 
     h1 {
       @include page-layout-title;
-      background: $red;
+      background: $gray3;
       color: $white;
     }
     .btn-300 {

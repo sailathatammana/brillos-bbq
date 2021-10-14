@@ -18,5 +18,41 @@
     "type": "time",
     "placeholder": "HH.MM",
     "required": true
+  },
+  "title": {
+    "settings": {
+      "label": "Title",
+      "type": "text",
+      "placeholder": "Title",
+      "alert": "Please enter a valid name (> 3 chars) that does not exists already",
+      "className": "input-title"
+    }
+  },
+  "description": {
+    "settings": {
+      "label": "Description",
+      "type": "text",
+      "placeholder": "Description",
+      "alert": "Please enter a valid description (10-150 chars)",
+      "className": "input-description"
+    }
+  },
+  "ingredients": {
+    "settings": {
+      "label": "Ingredients",
+      "type": "text",
+      "placeholder": "Ingredients   ",
+      "alert": "Please enter a valid ingredients (3-10 chars)",
+      "className": "input-ingredient"
+    }
+  },
+  "price": {
+    "settings": {
+      "label": "Price",
+      "type": "text",
+      "placeholder": "Price",
+      "alert": "Please enter a valid price > 0",
+      "className": "input-price"
+    }
   }
 }

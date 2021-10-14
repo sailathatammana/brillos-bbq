@@ -8,7 +8,6 @@ export default function Map() {
         height="650"
         frameBorder="0"
         style={{ border: "0", display: "flex", margin: "10px auto" }}
-        allowfullscreen=""
         loading="lazy"
       ></iframe>
     </div>

@@ -1,0 +1,110 @@
+.admin {
+  min-height: calc(100vh - 160px);
+  .section-admin {
+    max-width: 800px;
+    margin: 24px auto;
+    display: grid;
+    gap: 8px;
+    @media only screen and (min-width: $desktopBreakpoint) {
+      margin: 24px auto;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      padding: 0 12px;
+      margin-bottom: 44px;
+      @media only screen and (min-width: $desktopBreakpoint) {
+        padding: 0;
+      }
+    }
+    .drop-container {
+      position: absolute;
+      margin-top: 44px;
+      width: 100vw;
+      max-width: 800px;
+      padding: 0 12px;
+      display: grid;
+      gap: 12px;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      justify-content: center;
+      @media only screen and (min-width: $desktopBreakpoint) {
+        padding: 0;
+      }
+      .dropdown {
+        width: 100%;
+        .select-ghost h4,
+        .caret h4 {
+          font-size: 12px;
+        }
+        @media only screen and (min-width: $desktopBreakpoint) {
+          padding: 0;
+          .select-ghost h4,
+          .caret h4 {
+            font-size: unset;
+          }
+        }
+      }
+    }
+    .admin-subtitle,
+    .admin-instructions {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      color: $red;
+      @media only screen and (min-width: $desktopBreakpoint) {
+        padding: 0;
+      }
+    }
+    form {
+      gap: 6px;
+      grid-auto-flow: row;
+      grid-auto-rows: min-content;
+      grid-template-rows: unset;
+      align-items: center;
+      justify-items: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 0;
+      @media only screen and (min-width: $desktopBreakpoint) {
+        border-radius: 12px;
+      }
+      .empty {
+        height: 44px;
+      }
+      .btn-300 {
+        width: 300px;
+        margin: 24px;
+        @media only screen and (min-width: $desktopBreakpoint) {
+          margin: 0 230px;
+        }
+      }
+      input {
+        color: $black;
+      }
+      input[type="submit"] {
+        color: $white;
+      }
+      .input-title,
+      .input-ingredient,
+      .input-price {
+        width: 90%;
+        height: $mob-button-height;
+        box-sizing: border-box;
+        padding: 0 24px;
+        border: 2px solid $black;
+        border-radius: 8px;
+      }
+      .input-description {
+        width: 90%;
+        height: $mob-button-height;
+        box-sizing: border-box;
+        padding: 0 24px;
+        border: 2px solid $black;
+        border-radius: 8px;
+      }
+    }
+  }
+}

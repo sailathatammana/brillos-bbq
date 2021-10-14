@@ -15,7 +15,6 @@ button {
   background: $red;
   border: 1px solid $red;
   border-radius: 8px;
-  filter: brightness(0.8);
 
   h3,
   h4 {
@@ -30,10 +29,36 @@ button {
   }
   &:hover {
     transition: ease 0.3s;
-    filter: brightness(1);
   }
   &:disabled {
     filter: saturate(0);
     opacity: 0.05;
+  }
+}
+
+.select-ghost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: none;
+  border: 2px solid $black;
+  border-radius: 8px;
+  width: 90%;
+
+  h4 {
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+
+  &:hover {
+    transition: ease 0.3s;
+    background: $white;
+    h4 {
+      color: $black;
+    }
+    .dropdown-arrow {
+      filter: invert(0);
+    }
   }
 }

@@ -5,7 +5,7 @@ export default function Products({ category }) {
   const products = useFetch("products");
 
   // Const
-  const listOfDishes = getRelatedFood(products.data, category.id);
+  const listOfProducts = getRelatedFood(products.data, category.id);
 
   function getRelatedFood(array, categoryID) {
     return array.filter((item) => {
@@ -13,8 +13,7 @@ export default function Products({ category }) {
     });
   }
 
-  const ProductsItems = listOfDishes.map((item) => {
-    console.log(item.category);
+  const ProductsItems = listOfProducts.map((item) => {
     return (
       <a key={item.id} href={`./${item.category}/${item.id}`} className="card">
         <img src={item.imageURL} alt="img" />
@@ -31,7 +30,7 @@ export default function Products({ category }) {
       {products.error !== null && <p>Error 🚨</p>}
       {!products.loading && products.error === null && (
         <>
-          {listOfDishes.length === 0 ? (
+          {listOfProducts.length === 0 ? (
             <h4 className="empty-list">Category empty for now</h4>
           ) : (
             <section className="section-products ">{ProductsItems} </section>

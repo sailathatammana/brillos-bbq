@@ -8,7 +8,7 @@ export default function ProductPage() {
   // Hooks
   const products = useFetch("products");
   const { categoryID } = useParams();
-  const { productID } = useParams();
+  const { id } = useParams();
 
   function getRelatedItem(array, id) {
     return array.filter((item) => {
@@ -16,7 +16,7 @@ export default function ProductPage() {
     })[0];
   }
   // Const
-  const product = getRelatedItem(products.data, productID);
+  const product = getRelatedItem(products.data, id);
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function ProductPage() {
           <ProductDescription product={product} />
           <Ingredients product={product} />
           <NavLink to={`/menu/${categoryID}`} className="btn btn-main btn-300">
-            <h3>Go back to category</h3>
+            <h3>Go back</h3>
           </NavLink>
         </main>
       )}

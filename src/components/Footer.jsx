@@ -4,12 +4,12 @@ export default function Footer() {
       <ul>
         <li>
           <a href="https://www.facebook.com/" target="blank">
-            <i class="fab fa-facebook-square"></i>
+            <i className="fab fa-facebook-square"></i>
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/" target="blank">
-            <i class="fab fa-instagram-square"></i>
+            <i className="fab fa-instagram-square"></i>
           </a>
         </li>
       </ul>

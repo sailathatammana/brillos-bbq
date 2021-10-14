@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   font-smooth: auto;
@@ -16,7 +15,7 @@
   background-color: $color-light-grey;
   display: flex;
   flex-direction: column;
-  color: $white;
+  color: $black;
 }
 
 ul,

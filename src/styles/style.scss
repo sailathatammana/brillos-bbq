@@ -7,14 +7,19 @@
 @import "./typography.scss";
 
 @import "./components/button.scss";
+@import "./components/dropdown.scss";
 @import "./components/footer.scss";
 @import "./components/ingredients.scss";
 @import "./components/map.scss";
 @import "./components/nav-bar.scss";
 @import "./components/product.scss";
 @import "./components/productDescription.scss";
+@import "./components/sorter.scss";
+@import "./components/uploadImage.scss";
 
+@import "./pages/adminPage.scss";
 @import "./pages/categoryPage.scss";
 @import "./pages/contactpage.scss";
+@import "./pages/homePage.scss";
 @import "./pages/menuPage.scss";
 @import "./pages/productPage.scss";

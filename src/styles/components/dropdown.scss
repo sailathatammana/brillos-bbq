@@ -1,0 +1,14 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: inherit auto;
+  .caret {
+    background: $white;
+    height: max-content;
+    width: 90%;
+    padding: 16px 8px 8px 8px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+  }
+}

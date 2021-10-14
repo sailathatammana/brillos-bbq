@@ -1,0 +1,32 @@
+.upload {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  .add {
+    width: 100%;
+    align-self: flex-start;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    padding: 0 8px;
+    height: 60px;
+    label {
+      cursor: pointer;
+      @include flex-full-centered;
+      height: 50px;
+      width: 120px;
+      background: $red;
+      border-radius: 10px;
+      color: $white;
+      input {
+        display: none;
+      }
+      &:hover {
+        background: $red;
+        border-color: $red;
+      }
+    }
+  }
+}

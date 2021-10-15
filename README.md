@@ -54,7 +54,7 @@ A low detail mockup to visualize how the app will look.
 
 The component tree allows to visualize the overall hierarchy of the project.
 
-[Component Tree](https://whimsical.com/component-tree-bbq-restaurant-Epk74jrA5NqkTgzYr8rFfM@2Ux7TurymMwqYqZKEjnH)
+[Component Tree](https://whimsical.com/component-tree-bbq-restaurant-Epk74jrA5NqkTgzYr8rFfM@2Ux7TurymMr14NuJTRDS)
 
 ---
 
